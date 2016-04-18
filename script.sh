@@ -1,6 +1,6 @@
 #! /bin/bash
 
-check=$(pgrep apache2| head -n1)
+check="$(pgrep apache2| head -n1)"
 
 if ["$check" == ""]; then
         apt install apache2 -y
