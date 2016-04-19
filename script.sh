@@ -8,6 +8,6 @@ fi
 
 
 sed -i '/DocumentRoot \/var\/www\/html/d' $apacheconf || sed -i '/DocumentRoot \/var\/www\/html\/instant-search/d' $apacheconf
-sed -i '12 a DocumentRoot \/var\/www\/html\/instant-search' /etc/apache2/sites-enabled/000-default.conf
+sed -i '12 a DocumentRoot \/var\/www\/html\/instant-search' $apacheconf
 
 /etc/init.d/apache2 restart 2>1&
