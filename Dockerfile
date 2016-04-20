@@ -3,8 +3,8 @@ EXPOSE 80
 
 RUN apt-get update -y && apt-get install -y net-tools supervisor apache2
 
-RUN mkdir -p /var/www/html/instant-search
-ADD  instant-search /var/www/html/instant-search
+RUN mkdir -p /var/www/html/order-form
+ADD  order-form /var/www/html/order-form
 RUN chown -R www-data:www-data /var/www/html
 
 RUN sed  -i "1i ServerName $(ifconfig | grep "inet addr" | awk '{print $2}' | head -n 1 | cut -d: -f2)" /etc/apache2/apache2.conf
